@@ -6,15 +6,18 @@ I'm hoping this drum kit can help make it eaiser for beginner drummers to learn.
 # DESIGN & METHOD 
 ## Hardware
 ![drumkit](media/arduino_piezo_drum_kit.jpeg)
-I'm using an Arduino Uno board to implement the hardware side. It mainly consists of two parts - the piezo drum kit and the lights. For each drum piece, I need a piezoelectric sensor connecting to an analog pin for reading. Since there are only six analog pins in an Arduino Uno board, I can only include six pieces for my drum kit, so I took off some toms and only left a floor tom in my kit. 
-As show in the image above, from left to right, I have crash cymbal, hi-hat, snare drum, bass drum, floor tom and ride cymbal. And that completes my drum kit. <br /><br />
-The connection of LED lights is more straightforward. One side is to the digital pin and the other is to the ground. Each light is placed right at the edge of each drum pad.
+I'm using an Arduino Uno board to implement the hardware side. It mainly consists of two parts - the piezo drum kit and the lights. For each drum piece, I need a piezoelectric sensor connecting to an analog pin for reading. Since there are only six analog pins in an Arduino Uno board, I can only include six pieces for my drum kit, so I took off some toms and only left a floor tom in my kit. As show in the image above, from left to right, I have crash cymbal, hi-hat, snare drum, bass drum, floor tom and ride cymbal. <br /><br /> 
+The connection of LED lights is more straightforward. One side is to the digital pin and the other is to the ground. Each light is placed right at the edge of each drum pad. And that completes my circuit. <br /><br />
 ## Software
 
-# DEMO
+# DEMO 1
+
+# IMPROVEMENT
+
+# DEMO 2
 
 # DISCUSSION
-
+When a piezo sensor gets hit, in order to get a value read, 
 ### Markdown
 
 Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
