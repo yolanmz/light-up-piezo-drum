@@ -4,9 +4,12 @@ I have always wanted to learn how to play drums. With everything I have learned 
 I'm hoping this drum kit can help make it eaiser for beginner drummers to learn. That's how this design of light-up piezo drum comes into my mind. It is based on an arduino piezo drum, plus the functionality that if the user plays a midifile, and a drum key is triggered in the file, the corresponding part in the drum kit will light up, and the user will be able to follow along playing the drum part with the music.<br /><br />
 
 # DESIGN & METHOD 
-### Hardware
+## Hardware
 ![drumkit](media/arduino_piezo_drum_kit.jpeg)
-### Software
+I'm using an Arduino Uno board to implement the hardware side. It mainly consists of two parts - the piezo drum kit and the lights. For each drum piece, I need a piezoelectric sensor connecting to an analog pin for reading. Since there are only six analog pins in an Arduino Uno board, I can only include six pieces for my drum kit, so I took off some toms and only left a floor tom in my kit. 
+As show in the image above, from left to right, I have crash cymbal, hi-hat, snare drum, bass drum, floor tom and ride cymbal. And that completes my drum kit. <br /><br />
+The connection of LED lights is more straightforward. One side is to the digital pin and the other is to the ground. Each light is placed right at the edge of each drum pad.
+## Software
 
 # DEMO
 
