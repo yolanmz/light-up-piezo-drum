@@ -1,8 +1,7 @@
 # INTRODUCTION
 
-You can use the [editor on GitHub](https://github.com/yolanmz/light-up-piezo-drum/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
-
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+I have always wanted to learn how to play drums. With everything I have learned in MUMT306, I figured that I can finally make it possible without taking too much space and making too much noises. I decided to make a portable electronic drum kit. 
+I'm hoping this drum kit can help make it eaiser for beginner drummers to learn. That's how this design of light-up piezo drum comes into my mind. It is based on an arduino piezo drum, plus the functionality that if the user plays a midifile, and a drum key is triggered in the file, the corresponding part in the drum kit will light up, and the user will be able to follow along playing the drum part with the music.
 
 ### Markdown
 
