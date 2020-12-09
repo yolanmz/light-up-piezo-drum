@@ -5,7 +5,7 @@ I'm hoping this drum kit can help make it eaiser for beginner drummers to learn.
 
 # DESIGN & METHOD 
 ### Hardware
-
+![drumkit](media/arduino_piezo_drum_kit.jpeg)
 ### Software
 
 # DEMO
