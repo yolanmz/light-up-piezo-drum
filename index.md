@@ -14,7 +14,7 @@ Here is a screenshot of the Max patcher.<br />
 ![patcher](media/piezo_patcher.png)
 The left side of the patcher is sending data from Arduino to Max, and the right side checks if the incoming message is a percussion note and sends the pitch to Arduino if so. The pitch represents a percussion instrument in general midi. If the pitch coming in matches the type of a drum piece, the light will be on for that piece. Since general midi has way too many percussion instruments, and we can only include six. I turn the light on as long as they roughly match, as shown in the screenshot below. For example, all types of tom from the midi file all trigger the light of floor tom in our piezo kit.
 ![light](media/arduino_light_on.png)
-Since pressing the piezo sensor gives a range of values, we require a threshold to 
+Since pressing the piezo sensor gives a range of values, it requires a threshold to ensure only one sound is produced every time we hit the drum pad. Through experiments, I chose 80 as my threshold value. I also used this reading for the velocity of the midi message we send, so it behaves more like a regular drum piece - the harder it gets hit, the louder it gets.
 # DEMO 1
 Here is a [video](https://youtu.be/JguaIu-2GNw) testing the piezo drum itself.<br />
 Here is a [video](https://youtu.be/OgUzo6It5Sk) playing the drums while a midi file is played.
