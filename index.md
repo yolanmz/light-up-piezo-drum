@@ -9,9 +9,11 @@ I'm hoping this drum kit can help make it eaiser for beginner drummers to learn.
 I'm using an Arduino Uno board to implement the hardware side. It mainly consists of two parts - the piezo drum kit and the lights. For each drum piece, I need a piezoelectric sensor connecting to an analog pin for reading. Since there are only six analog pins in an Arduino Uno board, I can only include six pieces for my drum kit, so I took off some toms and only left a floor tom in my kit. As show in the image above, from left to right, I have crash cymbal, hi-hat, snare drum, bass drum, floor tom and ride cymbal. <br /><br /> 
 The connection of LED lights is more straightforward. One side is to the digital pin and the other is to the ground. Each light is placed right at the edge of each drum pad. And that completes my circuit. <br /><br />
 ## Software
-To trigger the lights, I use RtMidi in C++ to read the midi file, and pass the data to Max. Then Max filters and passes the data to Arduino. For the drum notes part, I send the data read from the analog pins from Arduino to Max directly. Max is also used to sound out both the notes from the file and the drum notes being played.<br />
+To trigger the lights, I use RtMidi in C++ to read the midi file, and pass the data to Max. Then Max filters and passes the data to Arduino. For the drum notes part, I send the data read from the analog pins from Arduino to Max directly. Max is also used to sound out both the notes from the file and the drum notes being played.<br /> 
 Here is a screenshot of the Max patcher.<br />
 ![patcher](media/piezo_patcher.png)
+The left side of the patcher is converting Arduino to Max, and the right side checks if the incoming message is a percussion music. If so, it sends the pitch to Arduino. The pitch represents a percussion instrument in general midi. If the pitch coming in matches the type of a drum piece, we will turn on the light. Since general midi has way too many percussion instruments, and we can only include six. I tried to include as many as possible, as shown in the screenshot below. For example, all type of toms from the midi file all trigger the light of floor tom in the piezo kit.
+![light](media/arduino_light_on.png)
 # DEMO 1
 Here is a [video](https://youtu.be/JguaIu-2GNw) testing the piezo drum itself.<br />
 Here is a [video](https://youtu.be/OgUzo6It5Sk) playing the drums while a midi file is played.
