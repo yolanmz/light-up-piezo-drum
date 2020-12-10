@@ -9,13 +9,15 @@ I'm hoping this drum kit can help make it eaiser for beginner drummers to learn.
 I'm using an Arduino Uno board to implement the hardware side. It mainly consists of two parts - the piezo drum kit and the lights. For each drum piece, I need a piezoelectric sensor connecting to an analog pin for reading. Since there are only six analog pins in an Arduino Uno board, I can only include six pieces for my drum kit, so I took off some toms and only left a floor tom in my kit. As show in the image above, from left to right, I have crash cymbal, hi-hat, snare drum, bass drum, floor tom and ride cymbal. <br /><br /> 
 The connection of LED lights is more straightforward. One side is to the digital pin and the other is to the ground. Each light is placed right at the edge of each drum pad. And that completes my circuit. <br /><br />
 ## Software
-I'm using RtMidi in C++ to read the midi file. 
+To trigger the lights, I use RtMidi in C++ to read the midi file, and pass the data to Max. Then Max filters and passes the data to Arduino. For the drum notes part, I send the data read from the analog pins from Arduino to Max directly. Max is also used to sound out both the notes from the file and the drum notes being played.<br />
+Here is a screenshot of the Max patcher.<br />
+![patcher](media/piezo_patcher.png)
 # DEMO 1
 Here is a [video](https://youtu.be/JguaIu-2GNw) testing the piezo drum itself.<br />
 Here is a [video](https://youtu.be/OgUzo6It5Sk) playing the drums while a midi file is played.
 
 # IMPROVEMENT
-A problem I found when testing the device is that the lights flash out so fast, and it is very hard for people to catch a good number of notes.
+A problem I found when testing the device is that the lights flash out so fast, and it is very hard for people to catch a good number of notes. I think slowing down the speed of the midi file can be a possible solution, so I added an optional speed argument in my c++ program. 
 # DEMO 2
 Here is a [video](https://youtu.be/Vw5fl9Twc7Q) playing the drums while playing the midi file at half speed.
 
