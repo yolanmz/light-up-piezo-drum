@@ -26,5 +26,4 @@ Here is a [video](https://youtu.be/Vw5fl9Twc7Q) playing the drums while playing 
 
 
 # CONCLUSION
-Overall, my project does what I plan for it to do. I'm hoping people can have fun and get a good sense of rhythm and beats just by playing around with it. However, I'm still looking for ways to make this device a better fun tutorial platform for beginner drummers.
-
+Overall, my project does what I expect it to do. I hope people can have fun and get a good sense of rhythm and beats playing around with it. I'm still looking for ways to make this device a better fun tutorial platform for beginner drummers. An idea I have for now is maybe instead of leaving the next note hanging in the air, I can have a screen showing what notes are coming within a certain time frame. I will update this page if I add anything new to my drum kit!
